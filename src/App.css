@@ -12,10 +12,16 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em rgba(162, 100, 255, 0.667));
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo.bitcoin:hover {
+  filter: drop-shadow(0 0 2em rgba(255, 174, 0, 0.667));
+}
+
+.logo.nostr {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 @keyframes logo-spin {
