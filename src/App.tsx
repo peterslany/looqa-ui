@@ -25,7 +25,7 @@ function App() {
 
       </div>
       <p className="read-the-docs">
-        Coming soon.
+        Coming soon in 2024.
       </p>
     </>
   );
