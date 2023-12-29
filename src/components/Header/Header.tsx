@@ -1,8 +1,8 @@
 import "./Header.css";
 
-type Props = {};
 
-const Header = (props: Props) => {
+
+const Header = () => {
   // TODO: add nostr signer connector
 
   return (

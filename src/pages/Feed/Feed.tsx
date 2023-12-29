@@ -1,8 +1,6 @@
-import React from "react";
 
-type Props = {};
 
-const Feed = (props: Props) => {
+const Feed = () => {
   return <div>Feed page</div>;
 };
 export { Feed };
