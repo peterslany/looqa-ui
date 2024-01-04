@@ -6,10 +6,12 @@ import { User } from "./user";
 
 interface LeventLocation {
   label: string;
-  geolocation: string;
+  lat: number; //latitude
+  lng: number; //longitude
 }
 
 interface LeventBase {
+  id: string;
   name: string;
   startDate: string; // ISO string
   endDate: string; // ISO string

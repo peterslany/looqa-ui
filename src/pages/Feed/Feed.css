@@ -1,5 +1,5 @@
 .feed__featured-container {
-  border-bottom: 1px solid var(--var-color-secondary);
+  border-bottom: var(--var-border);
   padding: 2rem 0;
 }
 
