@@ -1,0 +1,19 @@
+.feed__featured-container {
+  border-bottom: 1px solid var(--var-color-secondary);
+  padding: 2rem 0;
+}
+
+.feed__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.feed__main__posts {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.feed__main__sidebar {
+  grid-area: 1 / 2 / 2 / 3;
+}
