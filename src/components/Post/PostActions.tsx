@@ -1,7 +1,5 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { Heart, Zap, Repeat, MessageCircle } from "react-feather";
-
-type Props = {};
 
 type PostActionProps = {
   type: "heart" | "message" | "repeat" | "zap";
@@ -61,7 +59,7 @@ const PostAction = ({
   );
 };
 
-const PostActions = (props: Props) => {
+const PostActions = () => {
   return (
     <div className="post-actions">
       <PostAction type="heart" count={25} />
