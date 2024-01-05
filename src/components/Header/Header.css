@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a#looqa {
+    font-family: Josefin Sans;
+    font-size: 2rem;
+    color: var(--var-color-primary)
+}

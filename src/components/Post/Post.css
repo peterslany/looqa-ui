@@ -1,0 +1,88 @@
+.post {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  text-align: left;
+  padding: 1rem 0;
+  border-bottom: var(--var-border);
+  position: relative;
+}
+
+.post__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  user-select: text;
+}
+
+.post__avatar {
+  position: relative;
+  max-height: 64px;
+}
+
+.post__content__levent-thumbnail{
+    margin: .5rem 0;
+}
+
+.post__content__name {
+  position: relative;
+  margin: 0;
+  font-size: 1.5rem;
+  max-width: 100%;
+}
+
+.post__content__name__handle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--var-color-tertiary);
+}
+
+.post__content__timestamp {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  opacity: 50%;
+}
+
+.post__content__body {
+  font-size: 1.25rem;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.post__content__body__text {
+  margin: 0.5rem 0;
+  position: relative;
+}
+.post__content__body__text:hover {
+  text-decoration: none;
+}
+
+.post__content__body img {
+  margin-top: 0.5rem;
+  max-width: 100%;
+}
+
+.post-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.post-action {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.post-action__button {
+  position: relative;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  stroke: var(--var-color-tertiary);
+}
+
+.post-action__button:hover {
+  stroke: var(--var-color-secondary);
+}

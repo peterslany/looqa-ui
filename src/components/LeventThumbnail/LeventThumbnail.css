@@ -1,0 +1,29 @@
+.levent-thumbnail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--var-bg-tertiary);
+    padding: .5rem 0.75rem;
+    border-radius: .5rem;
+    color: var(--var-color-primary);
+    position: relative;
+}
+
+.levent-thumbnail:hover {
+    background-color: var(--var-bg-secondary);
+    text-decoration: none;
+}
+
+.levent-thumbnail__data__name {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.frens-thumbnail {
+    display: inline-flex;
+    margin-right: 12px;
+}
+
+.frens-thumbnail > div {
+    margin-right: -6px;
+}
