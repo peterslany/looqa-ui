@@ -31,9 +31,11 @@ const LeventCard = ({ levent }: Props) => {
         <div className="levent-card__data__name">{levent.name}</div>
         {/* TODO: Improve time formatting  */}
         <div className="levent-card__data__street">{address}</div>
-        <div>
-          <FrensThumbnail npubs={npubsGoing} /> experiencing.
-        </div>
+        {npubsGoing.length > 0 && (
+          <div>
+            <FrensThumbnail npubs={npubsGoing} /> experiencing.
+          </div>
+        )}
       </div>
     </Link>
   );
