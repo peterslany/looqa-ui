@@ -4,10 +4,13 @@ import { User } from "./user";
 // MEMO: Using name 'lEvent' for looqa events to not confuse this with
 // programmatic events or nostr events
 
-interface LeventLocation {
-  label: string;
+interface Location {
   lat: number; //latitude
-  lng: number; //longitude
+  lon: number; //longitude
+}
+
+interface LeventLocation extends Location {
+  label: string;
 }
 
 interface LeventBase {
@@ -20,9 +23,9 @@ interface LeventBase {
 }
 
 interface Levent extends LeventBase {
-  previewImage: ReactNode; // figure out type?
+  previewImage: string; // figure out type?
   description: ReactNode;
   visitorCount: number; // TODO: maybe fetch this programatically??
 }
 
-export type { Levent, LeventBase };
+export type { Levent, LeventBase, Location };

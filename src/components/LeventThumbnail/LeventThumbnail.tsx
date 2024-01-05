@@ -1,9 +1,8 @@
-import Avvvatars from "avvvatars-react";
 import { MapPin } from "react-feather";
 import { Link } from "react-router-dom";
 import { Path } from "../../constants";
 import { LeventBase } from "../../types/levent";
-import { Avatar } from "../Avatar/Avatar";
+import { FrensThumbnail } from "../FrensThumbnail/FrensThumbnail";
 import "./LeventThumbnail.css";
 
 type Props = { levent: LeventBase };
@@ -11,19 +10,6 @@ type Props = { levent: LeventBase };
 const mockVisitorsNpubs = (seed: string, amount: number) =>
   Array.from(Array(amount)).map((_, i) => seed + i);
 
-const FrensThumbnail = ({ npubs }: { npubs: string[] }) => {
-  // We display only 3 thumbnails of frens going
-  const visibleFrens = npubs.slice(0, 3);
-  const hasExtraFrens = npubs.length - 3;
-  return (
-    <span className="frens-thumbnail">
-      {visibleFrens.map((fren) => (
-        <Avatar key={fren} user={{ npubkey: fren }} size={20} />
-      ))}
-      {hasExtraFrens > 0 && <Avvvatars value={`+${hasExtraFrens}`} size={20} />}
-    </span>
-  );
-};
 
 const LeventThumbnail = ({ levent }: Props) => {
   const npubsGoing = mockVisitorsNpubs(
@@ -39,7 +25,7 @@ const LeventThumbnail = ({ levent }: Props) => {
         {levent.location.label} |{" "}
         {new Date(levent.startDate).toLocaleDateString()} |{" "}
         <FrensThumbnail npubs={npubsGoing} />
-         experiencing.
+         experiencing. 
       </div>
     </Link>
   );

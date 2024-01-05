@@ -1,0 +1,8 @@
+.frens-thumbnail {
+    display: inline-flex;
+    margin-right: 12px;
+}
+
+.frens-thumbnail > div {
+    margin-right: -6px;
+}
