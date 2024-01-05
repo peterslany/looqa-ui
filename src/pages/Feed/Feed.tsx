@@ -36,6 +36,22 @@ const leventBitcoinHongKong: Levent = {
   },
 };
 
+const leventPeruviana: Levent = {
+  id: "1",
+  name: "Wi Tahin: SESSAMPASTE Exhibition",
+  startDate: new Date(2024, 2, 10).toISOString(),
+  endDate: new Date(2024, 5, 24).toISOString(),
+  description: `Skissernas Museum – Museum of Artistic Process and Public Art – will present a solo exhibition by Fredrik Strid in the spring and summer of 2024. The starting point for the exhibition Making Nature is the process-based sculpture project Alla fåglar i Sverige (All Birds of Sweden). The project, which the artist has been working on since 2018, will be shown here in its entirety for the first time. The extensive installation consists of all the 274 bird species found in Sweden, which have been modelled at full scale in clay and then cast to create candles in white stearin (candle wax). The stearin birds are presented using a specially made shelf system that takes up a large part of the exhibition space. The work becomes a kind of natural history collection. All the birds have a label showing the species name and are arranged in a way that brings to mind the presentation of animals in old natural history museums. The fragile stearin birds create a materiality that leads to reflections on impermanence.`,
+  visitorCount: 55,
+  previewImage: "none",
+  organizer: userAgarcia,
+  location: {
+    label: "New York",
+    lat: 40.7274946,
+    lng: -73.97928,
+  },
+};
+
 const posts: Array<Post> = [
   {
     id: "0",
@@ -49,7 +65,7 @@ const posts: Array<Post> = [
     id: "1",
     text: "We are opening a new exhibition at Peruvian Cafe this Saturday! Come at 18.00 for the vernissage!",
     author: userAgarcia,
-    levent: leventBitcoinHongKong,
+    levent: leventPeruviana,
     media: "https://i.pinimg.com/originals/05/6b/0a/056b0ab04716fc8c1278f25cdc813381.jpg",
     timestamp: new Date(2024, 0, 1, 15, 46).toISOString()
   },

@@ -6,7 +6,7 @@ enum Path {
     DISCOVER = '/discover',
     PROFILE = '/profile',
     EVENT = '/event',
-    POST = 'post',
+    POST = '/post',
 }
 
 const routes = [

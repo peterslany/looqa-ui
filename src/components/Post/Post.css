@@ -21,6 +21,10 @@
   max-height: 64px;
 }
 
+.post__content__levent-thumbnail{
+    margin: .5rem 0;
+}
+
 .post__content__name {
   position: relative;
   margin: 0;
