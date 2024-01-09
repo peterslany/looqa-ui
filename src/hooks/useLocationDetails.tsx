@@ -15,10 +15,11 @@ const fetchLocationDetails = async (location: Location) => {
   }
 };
 
-const useLocationDetails = (location: Location) => {
+const useLocationDetails = (location: Location | undefined) => {
   return useQuery({
-    queryKey: ["location", location.lat, location.lon],
-    queryFn: () => fetchLocationDetails(location),
+    queryKey: ["location", location?.lat, location?.lon],
+    queryFn: () => location && fetchLocationDetails(location),
+    enabled: !!location
   });
 };
 

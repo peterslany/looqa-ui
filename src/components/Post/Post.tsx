@@ -8,9 +8,10 @@ import { PostActions } from "./PostActions";
 
 type Props = {
   post: Post;
+  showLevent?: boolean;
 };
 
-const PostComponent = ({ post }: Props) => {
+const PostComponent = ({ post, showLevent = true }: Props) => {
   return (
     <div className="post">
       <Link
@@ -37,9 +38,9 @@ const PostComponent = ({ post }: Props) => {
           {/* TODO: Improve time formatting  */}
           {new Date(post.timestamp).toLocaleString()}
         </span>
-        <div className="post__content__levent-thumbnail">
+        {showLevent && <div className="post__content__levent-thumbnail">
           <LeventThumbnail levent={post.levent} />
-        </div>
+        </div>}
         <div className="post__content__body">
           <Link
             to={`${Path.POST}/${post.id}`}

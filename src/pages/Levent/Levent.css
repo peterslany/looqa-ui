@@ -1,0 +1,78 @@
+.levent-page__title__img {
+  position: absolute;
+  width: 100vw;
+  top: -124px;
+  z-index: -1;
+  height: calc(100% + 124px);
+  object-fit: cover;
+  opacity: 0.6;
+  transform: translateX(-50%);
+}
+
+.levent-page__title {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.levent-page__title h1 {
+  font-weight: 600;
+}
+
+.levent-page__title h1,
+h2,
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.levent-page__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.levent-page__main__content__description {
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 2rem;
+  background-color: var(--var-bg-secondary);
+  border-radius: 0.5rem;
+}
+
+.levent-page__main__content__posts {
+    margin: 2rem 0;
+    border-top: var(--var-border);
+}
+
+.levent-page__main__sidebar {
+  grid-area: 1 / 2 / 2 / 3;
+  max-width: 24rem;
+  background-color: var(--var-bg-secondary);
+  align-self: start;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.levent-page__main__sidebar__name {
+  text-align: left;
+  width: 100%;
+  font-size: 1.67rem;
+  font-weight: 800;
+}
+
+.levent-page__main__sidebar__item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.levent-page__main__sidebar__cta {
+    margin: 0.5rem 0;
+}

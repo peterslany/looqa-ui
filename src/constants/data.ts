@@ -16,7 +16,7 @@ const userAgarcia: User = {
 
 const leventBitcoinHongKong: Levent = {
   id: "0",
-  name: "Bitcoin Hong Kong 2024",
+  name: "bitcoinasia 2024",
   startDate: new Date(2024, 3, 22).toISOString(),
   endDate: new Date(2024, 3, 24).toISOString(),
   description: `BITMAIN - the world's leading manufacturer of digital currency mining servers through its brand ANTMINER, will host the 2023 World Digital Mining Summit (WDMS 2023) in Hong Kong from September 22nd to 23rd, 2023. This summit's theme is "Mining for the Bull Market," aiming to help clients strategize their mining operations in advance to reap the benefits of the future bull market.
@@ -25,7 +25,8 @@ const leventBitcoinHongKong: Levent = {
     
     Furthermore, as a token of appreciation to its customers and to promote long-term companionship and win-win partnership, the summit will offer numerous benefits to attendees. BITMAIN will launch a customer loyalty points system. Customers can use these points to apply for a free credit limit on the S21, allowing them to start mining before making payments. They can also use the points to redeem exclusive discount coupons for the ANTMINER S21 and enjoy optimal discounts. Stay tuned for more surprises!`,
   visitorCount: 271,
-  previewImage: "none",
+  previewImage:
+    "https://assets-global.website-files.com/6488b0b0fcd2d95f6b83c9d4/6571b94ee6af410a48baa5a6_hk_00-andres-garcia-OgrfLCYqfVY-unsplash.jpg",
   organizer: userBailey,
   location: {
     label: "Hong Kong",
@@ -41,7 +42,8 @@ const leventPeruviana: Levent = {
   endDate: new Date(2024, 5, 24).toISOString(),
   description: `Skissernas Museum – Museum of Artistic Process and Public Art – will present a solo exhibition by Fredrik Strid in the spring and summer of 2024. The starting point for the exhibition Making Nature is the process-based sculpture project Alla fåglar i Sverige (All Birds of Sweden). The project, which the artist has been working on since 2018, will be shown here in its entirety for the first time. The extensive installation consists of all the 274 bird species found in Sweden, which have been modelled at full scale in clay and then cast to create candles in white stearin (candle wax). The stearin birds are presented using a specially made shelf system that takes up a large part of the exhibition space. The work becomes a kind of natural history collection. All the birds have a label showing the species name and are arranged in a way that brings to mind the presentation of animals in old natural history museums. The fragile stearin birds create a materiality that leads to reflections on impermanence.`,
   visitorCount: 55,
-  previewImage: "none",
+  previewImage:
+    "https://www.gannett-cdn.com/-mm-/5c68917db80eec280d07352d0c01fee18634be0b/c=17-0-7663-4320/local/-/media/2016/09/13/WIGroup/Appleton/636093672521272265-FCEC-Rendering1.jpg?width=3200&height=1809&fit=crop&format=pjpg&auto=webp",
   organizer: userAgarcia,
   location: {
     label: "New York City",
@@ -103,6 +105,8 @@ const leventNYC3: Levent = {
 
 const leventsNYC = [leventNYC1, leventNYC2, leventNYC3];
 
+const levents = [leventBitcoinHongKong, leventPeruviana, ...leventsNYC];
+
 const posts: Array<Post> = [
   {
     id: "0",
@@ -131,4 +135,5 @@ export {
   userAgarcia,
   userBailey,
   posts,
+  levents,
 };

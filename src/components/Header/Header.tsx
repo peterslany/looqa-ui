@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 
@@ -8,9 +9,9 @@ const Header = () => {
   return (
     <nav>
         {/* TODO: change to router link */}
-      <a href="/" id="looqa">
+      <Link to="/" id="looqa">
         looqa
-      </a>
+      </Link>
       {/* TODO: handle connect wallet btn */}
       <button>connect nostr account</button>
     </nav>
