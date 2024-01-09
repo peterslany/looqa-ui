@@ -85,4 +85,5 @@
 
 .post-action__button:hover {
   stroke: var(--var-color-secondary);
+  border: none;
 }
