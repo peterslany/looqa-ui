@@ -13,7 +13,7 @@ const Avatar = ({ user, size = 64 }: Props) => {
         src={user.avatar}
         height={size}
         width={size}
-        style={{ borderRadius: "50%" }}
+        style={{ borderRadius: "50%", objectFit: "cover" }}
       />
     );
   return <Avvvatars value={user.npubkey} size={size} style="shape" />;

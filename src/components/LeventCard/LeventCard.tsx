@@ -19,7 +19,7 @@ const LeventCard = ({ levent }: Props) => {
   );
 
   const address = locationData?.address
-    ? `${locationData.address.road} ${locationData.address.house_number}`
+    ? `${locationData.address.road} ${locationData.address.house_number || ""}`
     : levent.location.label;
 
   return (

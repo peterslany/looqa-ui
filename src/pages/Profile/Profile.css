@@ -24,6 +24,8 @@
 .profile__info__avatar img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .profile__info__name {
@@ -42,6 +44,10 @@
 
 .profile__info__metric {
   font-weight: 600;
+}
+
+.profile__feed {
+    width: 100%;
 }
 
 .profile__feed__experiences {

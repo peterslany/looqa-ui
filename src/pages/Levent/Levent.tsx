@@ -32,7 +32,7 @@ const LeventPage = () => {
   );
 
   const address = locationData?.address
-    ? `${locationData.address.road} ${locationData.address.house_number}, ${locationData.address.city}`
+    ? `${locationData.address.road} ${locationData.address.house_number || ""}, ${locationData.address.city}`
     : levent.location.label;
 
   return (
@@ -97,7 +97,7 @@ const LeventPage = () => {
                     src={`https://testnet.ordinals.com/content/${levent.AOA}`}
                   />
                   <div>
-                    {levent.AOA?.slice(0, 4)}...
+                  inscription:  {levent.AOA?.slice(0, 4)}...
                     {levent.AOA?.slice(levent.AOA.length - 4)}
                   </div>
                 </a>

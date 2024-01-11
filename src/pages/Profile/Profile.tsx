@@ -1,8 +1,10 @@
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { Error404 } from "../../components";
 import { Avatar } from "../../components/Avatar/Avatar";
 import { LeventThumbnail } from "../../components/LeventThumbnail/LeventThumbnail";
 import { PostComponent } from "../../components/Post/Post";
+import { Path } from "../../constants";
 import { levents, posts, users } from "../../constants/data";
 import { Levent } from "../../types/levent";
 import "./Profile.css";
@@ -50,38 +52,52 @@ const Profile = () => {
       </div>
       <div className="profile__feed">
         <div className="profile__feed__experiences">
-          Artifacts of experience
-          <div className="profile__feed__experiences--past">
-            {pastExperiences.map((experience) => (
-              <div className="experience-card" key={experience.id}>
-                <div className="experience-card__name">{experience.name}</div>
-                <a
-                  target={"_blank"}
-                  href={`https://testnet.ordinals.com/inscription/${experience.AOA}`}
-                >
-                  <img
-                    className="experience-card__aoa"
-                    src={`https://testnet.ordinals.com/content/${experience.AOA}`}
-                  />
-                  <div>
-                    {experience.AOA?.slice(0, 4)}...
-                    {experience.AOA?.slice(experience.AOA.length - 4)}
+          {pastExperiences.length > 0 && (
+            <>
+              Artifacts of experience
+              <div className="profile__feed__experiences--past">
+                {pastExperiences.map((experience) => (
+                  <div key={experience.id} className="experience-card">
+                    <Link to={`${Path.EVENT}/${experience.id}`}>
+                      <div className="experience-card__name">
+                        {experience.name}
+                      </div>
+
+                      <img
+                        className="experience-card__aoa"
+                        src={`https://testnet.ordinals.com/content/${experience.AOA}`}
+                      />
+                    </Link>
+                    <a
+                      target={"_blank"}
+                      href={`https://testnet.ordinals.com/inscription/${experience.AOA}`}
+                    >
+                      {" "}
+                      <div>
+                        inscription: {experience.AOA?.slice(0, 4)}...
+                        {experience.AOA?.slice(experience.AOA.length - 4)}
+                      </div>
+                    </a>
                   </div>
-                </a>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
           {/* UPCOMING EVENTS THAT THIS USER ATTENDS */}
-          Upcoming experiences
-          <div className="profile__feed__experiences--upcoming">
-            {upcomingExperiences.map((experience) => (
-              <LeventThumbnail levent={experience} key={experience.id} />
-            ))}
-          </div>
+          {upcomingExperiences.length > 0 && (
+            <>
+              Upcoming experiences
+              <div className="profile__feed__experiences--upcoming">
+                {upcomingExperiences.map((experience) => (
+                  <LeventThumbnail levent={experience} key={experience.id} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
         <div className="profile__feed__posts">
           {userPosts.map((post) => (
-            <PostComponent key={post.id} post={post} showLevent={false} />
+            <PostComponent key={post.id} post={post} />
           ))}
         </div>
       </div>
