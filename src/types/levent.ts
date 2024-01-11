@@ -26,6 +26,7 @@ interface Levent extends LeventBase {
   previewImage: string; // figure out type?
   description: ReactNode;
   visitorCount: number; // TODO: maybe fetch this programatically??
+  AOA?: string; // inscription id
 }
 
 export type { Levent, LeventBase, Location };

@@ -65,7 +65,7 @@ const PostActions = () => {
       <PostAction type="heart" count={25} />
       <PostAction type="message" count={7} />
       <PostAction type="repeat" highlightColor={PURPLE_COLOR} count={12} />
-      <PostAction type="zap" count={256} onClick={() => window.alert("ZAP!")} />
+      <PostAction type="zap" count={256} onClick={() => window.alert("LN zapping functionality to be implemented in the future iterations.")} />
     </div>
   );
 };

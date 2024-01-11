@@ -48,11 +48,13 @@
   font-size: 1.25rem;
   max-width: 100%;
   word-break: break-word;
+  margin-bottom: 1rem;
 }
 
 .post__content__body__text {
   margin: 0.5rem 0;
   position: relative;
+  white-space: pre-line;
 }
 .post__content__body__text:hover {
   text-decoration: none;

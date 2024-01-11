@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Path } from "../../constants";
 import { Post } from "../../types/post";
+import { getDateTime } from "../../utils";
 import { Avatar } from "../Avatar/Avatar";
 import { LeventThumbnail } from "../LeventThumbnail/LeventThumbnail";
 import "./Post.css";
@@ -35,8 +36,7 @@ const PostComponent = ({ post, showLevent = true }: Props) => {
           </Link>{" "}
         </span>
         <span className="post__content__timestamp">
-          {/* TODO: Improve time formatting  */}
-          {new Date(post.timestamp).toLocaleString()}
+          {getDateTime(new Date(post.timestamp))}
         </span>
         {showLevent && <div className="post__content__levent-thumbnail">
           <LeventThumbnail levent={post.levent} />
