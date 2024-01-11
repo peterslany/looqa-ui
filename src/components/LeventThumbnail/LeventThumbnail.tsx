@@ -10,7 +10,6 @@ type Props = { levent: LeventBase };
 const mockVisitorsNpubs = (seed: string, amount: number) =>
   Array.from(Array(amount)).map((_, i) => seed + i);
 
-
 const LeventThumbnail = ({ levent }: Props) => {
   const npubsGoing = mockVisitorsNpubs(
     `npub1${levent.id}${levent.name}`,
@@ -19,13 +18,17 @@ const LeventThumbnail = ({ levent }: Props) => {
   return (
     <Link to={`${Path.EVENT}/${levent.id}`} className="levent-thumbnail">
       <MapPin />
-      <div >
+      <div>
         <div className="levent-thumbnail__data__name">{levent.name}</div>
         {/* TODO: Improve time formatting  */}
         {levent.location.label} |{" "}
         {new Date(levent.startDate).toLocaleDateString()} |{" "}
-        <FrensThumbnail npubs={npubsGoing} />
-         experiencing. 
+        {npubsGoing.length > 0 && (
+          <>
+            <FrensThumbnail npubs={npubsGoing} />
+            experiencing.{" "}
+          </>
+        )}
       </div>
     </Link>
   );

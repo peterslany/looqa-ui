@@ -52,6 +52,7 @@ button {
 }
 button:hover {
   border: 1px solid var(--var-color-tertiary);
+  background-color: var(--var-bg-secondary);
 }
 button:focus,
 button:focus-visible {

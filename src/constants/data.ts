@@ -6,16 +6,28 @@ const userBailey: User = {
   name: "David Bailey",
   npubkey: "npub1baileyl00qaasakjhdsfa09ufon",
   handle: "bailey",
+  peers: 506,
+  description: `Eternal Optimist, Builder, Backer, Vagrant, Evangelist, Nerd, CEO @bitcoinmagazine @TheBitcoinConf @UTXOmgmt @EarnWithBM All in on hyperbitcoinization.`,
+  avatar:
+    "https://pbs.twimg.com/profile_images/1732220592273690624/4LABU2zz_400x400.jpg",
+  experiences: ["bitcointokyo23", "bitcoinasia24", "pubkeybd"],
 };
 
 const userAgarcia: User = {
   name: "Andre Garcia",
   npubkey: "npub1agarcia23a7ga3rciau3si9ngl6oo68qa9app4",
   handle: "agarcia",
+  peers: 262,
+  avatar: "https://thispersondoesnotexist.com/",
+  description:
+    "Passionate art curator with a keen eye for avant-garde masterpieces, dedicated to fostering cultural dialogue through thought-provoking exhibitions and innovative curation.",
+  experiences: ["wi-tahin"],
 };
 
+const users = [userBailey, userAgarcia];
+
 const leventBitcoinHongKong: Levent = {
-  id: "0",
+  id: "bitcoinasia24",
   name: "bitcoinasia 2024",
   startDate: new Date(2024, 3, 22).toISOString(),
   endDate: new Date(2024, 3, 24).toISOString(),
@@ -36,7 +48,7 @@ const leventBitcoinHongKong: Levent = {
 };
 
 const leventPeruviana: Levent = {
-  id: "1",
+  id: "wi-tahin",
   name: "Wi Tahin: SESSAMPASTE Exhibition",
   startDate: new Date(2024, 2, 10).toISOString(),
   endDate: new Date(2024, 5, 24).toISOString(),
@@ -53,7 +65,7 @@ const leventPeruviana: Levent = {
 };
 
 const leventNYC1: Levent = {
-  id: "2",
+  id: "exponyc",
   name: "EXPO NYC",
   startDate: new Date().toISOString(),
   endDate: new Date().toISOString(),
@@ -70,7 +82,7 @@ const leventNYC1: Levent = {
 };
 
 const leventNYC2: Levent = {
-  id: "3",
+  id: "pubkeybd",
   name: "Pubkey Birthday Party",
   startDate: new Date().toISOString(),
   endDate: new Date().toISOString(),
@@ -87,7 +99,7 @@ const leventNYC2: Levent = {
 };
 
 const leventNYC3: Levent = {
-  id: "4",
+  id: "wolf-meetup",
   name: "Wolf BTC Meetup",
   startDate: new Date().toISOString(),
   endDate: new Date().toISOString(),
@@ -103,9 +115,33 @@ const leventNYC3: Levent = {
   },
 };
 
+const bitcoinTokyo: Levent = {
+  id: "bitcointokyo23",
+  name: "Bitcoin Tokyo 23",
+  startDate: new Date(2023, 2, 2, 10).toISOString(),
+  endDate: new Date(2023, 2, 5, 15).toISOString(),
+  description:
+    "Unveiling the future of decentralized finance, this event promises an immersive experience in the heart of Tokyo, merging cutting-edge blockchain technology discussions, expert insights, and vibrant networking opportunities, creating a pivotal moment for the global cryptocurrency community.",
+  visitorCount: 285,
+  previewImage:
+    "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2094&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  organizer: userAgarcia,
+  location: {
+    label: "Tokyo",
+    lat: 35.6415142,
+    lon: 139.6188922,
+  },
+  AOA: "4ec725ac4efd43067dc5de8ec08edd2d685a1dcd078cf75b84754904d4ea7bfei0",
+};
+
 const leventsNYC = [leventNYC1, leventNYC2, leventNYC3];
 
-const levents = [leventBitcoinHongKong, leventPeruviana, ...leventsNYC];
+const levents = [
+  leventBitcoinHongKong,
+  leventPeruviana,
+  bitcoinTokyo,
+  ...leventsNYC,
+];
 
 const posts: Array<Post> = [
   {
@@ -136,4 +172,5 @@ export {
   userBailey,
   posts,
   levents,
+  users,
 };

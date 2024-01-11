@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router";
 import App from "../App";
-import { LeventPage, PostPage } from "../pages";
+import { LeventPage, PostPage, Profile } from "../pages";
 import { Feed } from "../pages/Feed";
 
 enum Path {
@@ -28,6 +28,10 @@ const routes: Array<RouteObject> = [
         path: `${Path.EVENT}/:eventId`,
         element: <LeventPage />,
       },
+      {
+        path: `${Path.PROFILE}/:userId`,
+        element: <Profile />
+      }
     ],
   },
 ];

@@ -1,0 +1,87 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.profile__info {
+  align-self: flex-start;
+  max-width: 24rem;
+  background-color: var(--var-bg-secondary);
+  align-self: start;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__info__avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.profile__info__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.profile__info__name__handle {
+  font-weight: 400;
+}
+
+.profile__info__npub {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--var-color-tertiary);
+}
+
+.profile__info__metric {
+  font-weight: 600;
+}
+
+.profile__feed__experiences {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.profile__feed__experiences--past {
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  border-bottom: var(--var-border);
+}
+
+.profile__feed__experiences--upcoming {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: var(--var-border);
+}
+.profile__feed__experiences--upcoming .levent-thumbnail {
+  background-color: var(--var-bg-secondary);
+}
+
+/* EXPERIENCE CARD */
+.experience-card {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--var-bg-secondary);
+  border-radius: 0.5rem;
+}
+
+.experience-card__name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card__aoa {
+  max-width: 160px;
+}

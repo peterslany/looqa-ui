@@ -55,7 +55,7 @@ const LeventPage = () => {
           <h2>Related Posts</h2>
           <div className="levent-page__main__content__posts">
             {relatedPosts.map((post) => (
-              <PostComponent key={post.id} post={post} showLevent={false}/>
+              <PostComponent key={post.id} post={post} showLevent={false} />
             ))}
           </div>
         </div>
@@ -84,7 +84,34 @@ const LeventPage = () => {
               </div>
             )}
           </div>
-          <button onClick={() => window.alert("Ticket selling will be implemented in the future iterations.")} className="levent-page__main__sidebar__cta">
+          {levent.AOA && (
+            <>
+              Artifact of Experience
+              <div className="levent-page__main__sidebar__item">
+                <a
+                  target={"_blank"}
+                  href={`https://testnet.ordinals.com/inscription/${levent.AOA}`}
+                >
+                  <img
+                    className="experience-card__aoa"
+                    src={`https://testnet.ordinals.com/content/${levent.AOA}`}
+                  />
+                  <div>
+                    {levent.AOA?.slice(0, 4)}...
+                    {levent.AOA?.slice(levent.AOA.length - 4)}
+                  </div>
+                </a>
+              </div>
+            </>
+          )}
+          <button
+            onClick={() =>
+              window.alert(
+                "Ticket selling will be implemented in the future iterations."
+              )
+            }
+            className="levent-page__main__sidebar__cta"
+          >
             Buy ticket
           </button>
         </div>
