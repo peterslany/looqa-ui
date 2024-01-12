@@ -67,7 +67,7 @@
   max-width: 28rem;
   background-color: var(--var-bg-secondary);
   align-self: start;
-  padding: 0.5rem 2rem;
+  padding: 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
   position: sticky;
@@ -75,20 +75,19 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
+  gap: 1rem;
 }
 
 .feed-sidebar__location {
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   width: 100%;
 }
 
+
 .feed-sidebar__button {
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  background-color: var(--var-bg-tertiary);
   display: block;
   width: fit-content;
 }
