@@ -13,7 +13,7 @@ const PostPage = () => {
   }
   return (
     <div className="post-page">
-      <PostComponent post={post} />
+      <PostComponent post={post} previewMedia={false} />
     </div>
   );
 };

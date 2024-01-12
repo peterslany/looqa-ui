@@ -6,7 +6,7 @@ import { Avatar } from "../../components/Avatar/Avatar";
 import { FrensThumbnail } from "../../components/FrensThumbnail/FrensThumbnail";
 import { PostComponent } from "../../components/Post/Post";
 import { Path } from "../../constants";
-import { levents, posts } from "../../constants/data";
+import { getRealNpubsGoingToLevent, levents, posts } from "../../constants/data";
 import { useLocationDetails } from "../../hooks/useLocationDetails";
 import { formatDateRange, getDateTime } from "../../utils";
 import "./Levent.css";
@@ -26,11 +26,13 @@ const LeventPage = () => {
 
   const relatedPosts = posts.filter((post) => post.levent.id === eventId);
 
-  const npubsGoing = mockVisitorsNpubs(
-    `npub1${levent.id}${levent.name}`,
-    Math.round(Math.random() * 36) + 20
-  );
-
+  const npubsGoing = [
+    ...getRealNpubsGoingToLevent(levent),
+    ...mockVisitorsNpubs(
+      `npub1${levent.id}${levent.name}`,
+      Math.round(Math.random() * 27)
+    ),
+  ];
   const address = locationData?.address
     ? `${locationData.address.road} ${locationData.address.house_number || ""}, ${locationData.address.city}`
     : levent.location.label;

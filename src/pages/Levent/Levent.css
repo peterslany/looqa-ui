@@ -5,7 +5,7 @@
   z-index: -1;
   height: calc(100% + 124px);
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.4;
   transform: translateX(-50%);
 }
 
@@ -75,4 +75,19 @@ h3 {
 }
 .levent-page__main__sidebar__cta {
     margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 480px) {
+  .levent-page__main {
+    /* display: block; */
+    grid-template-columns: 1fr;
+  }
+
+  .levent-page__main__content__posts {
+    grid-area: 2/1;
+  }
+  .levent-page__main__sidebar {
+    grid-area: 1/1;
+    position: static;
+  }
 }

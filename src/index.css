@@ -18,9 +18,13 @@
   --var-color-secondary: #BCEEE5;
   --var-color-tertiary: #276C6C;
   --var-border: 1px solid var(--var-color-secondary);
+  --var-breakpoint-sm: 480px;
 
   background-color: var(--var-bg-primary);
   color: var(--var-color-primary);
+}
+* {
+  transition: background 0.25s ease, border 0.25s ease;
 }
 
 a {
@@ -48,7 +52,6 @@ button {
   font-family: inherit;
   background-color: var(--var-bg-tertiary);
   cursor: pointer;
-  transition: all 0.25s;
 }
 button:hover {
   border: 1px solid var(--var-color-tertiary);

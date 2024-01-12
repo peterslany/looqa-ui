@@ -21,8 +21,8 @@
   max-height: 64px;
 }
 
-.post__content__levent-thumbnail{
-    margin: .5rem 0;
+.post__content__levent-thumbnail {
+  margin: 0.5rem 0;
 }
 
 .post__content__name {
@@ -60,9 +60,14 @@
   text-decoration: none;
 }
 
-.post__content__body img {
+.post__content__body__media {
   margin-top: 0.5rem;
-  max-width: 100%;
+  width: 100%;
+}
+
+.post__content__body__media--preview {
+  max-height: 24rem;
+  object-fit: cover;
 }
 
 .post-actions {
