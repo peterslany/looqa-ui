@@ -25,12 +25,12 @@ const Feed = () => {
         </div>
       </div>
       <main className="feed__main">
+        <FeedSidebar location="New York City" />
         <div className="feed__main__posts">
           {posts.map((post) => (
             <PostComponent key={post.id} post={post} />
           ))}
         </div>
-        <FeedSidebar location="New York City" />
       </main>
     </div>
   );

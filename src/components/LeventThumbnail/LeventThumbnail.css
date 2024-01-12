@@ -1,20 +1,44 @@
 .levent-thumbnail {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background-color: var(--var-bg-tertiary);
-    padding: .5rem 0.75rem;
-    border-radius: .5rem;
-    color: var(--var-color-primary);
-    position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--var-bg-tertiary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--var-color-primary);
+  position: relative;
 }
 
+.levent-thumbnail__items {
+  display: flex;
+  column-gap: 0.75rem;
+  row-gap: 0.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.levent-thumbnail__item {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.levent-thumbnail__item > svg {
+  width: 18px;
+}
+
+.levent-thumbnail__item--friends {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
 .levent-thumbnail:hover {
-    background-color: var(--var-bg-secondary);
-    text-decoration: none;
+  background-color: var(--var-bg-secondary);
+  text-decoration: none;
 }
 
 .levent-thumbnail__data__name {
-    font-size: 1.25rem;
-    font-weight: 800;
+  font-size: 1.37rem;
+  font-weight: 800;
 }

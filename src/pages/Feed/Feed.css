@@ -9,22 +9,22 @@
   letter-spacing: 1.75rem;
   margin-bottom: 1.5rem;
   font-weight: 100;
+  text-indent: 1.75rem;
 }
 
 .feed__featured__levents {
-display: flex;
-flex-wrap: wrap;
-gap: 2rem;
-justify-content: space-evenly;
-max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  max-width: 100%;
 }
-
 
 .feed__featured__levents__item {
   position: relative;
   width: 268px;
   height: 144px;
-  background:  linear-gradient(to bottom , #07131300, #07131399);
+  background: linear-gradient(to bottom, #07131300, #07131399);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -36,7 +36,7 @@ max-width: 100%;
 }
 
 .feed__featured__levents__item:hover {
-  background:  linear-gradient(to bottom , #07131333, #071313bb);
+  background: linear-gradient(to bottom, #07131333, #071313bb);
   text-decoration: none;
 }
 .feed__featured__levents__item img {
@@ -64,7 +64,7 @@ max-width: 100%;
 }
 .feed-sidebar {
   grid-area: 1 / 2 / 2 / 3;
-  max-width: 24rem;
+  max-width: 28rem;
   background-color: var(--var-bg-secondary);
   align-self: start;
   padding: 0.5rem 2rem;
@@ -96,4 +96,20 @@ max-width: 100%;
 .feed-sidebar__button:hover {
   text-decoration: none;
   background-color: var(--var-bg-primary);
+}
+
+@media screen and (max-width: 843px) {
+  .feed__main {
+    /* display: block; */
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .feed__main__posts {
+    grid-area: 2/1;
+  }
+  .feed-sidebar {
+    grid-area: 1/1 / 1/ 1;
+    position: static;
+  }
 }

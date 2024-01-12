@@ -37,7 +37,7 @@ const LeventCard = ({ levent }: Props) => {
         <div className="levent-card__data__street">{address}</div>
         {npubsGoing.length > 0 && (
           <div>
-            <FrensThumbnail npubs={npubsGoing} /> experiencing.
+            <FrensThumbnail npubs={npubsGoing} /> 
           </div>
         )}
       </div>
