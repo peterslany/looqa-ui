@@ -1,5 +1,6 @@
 .feed__featured {
   border-bottom: var(--var-border);
+  margin-top: 1rem;
   padding-bottom: 3rem;
 }
 
