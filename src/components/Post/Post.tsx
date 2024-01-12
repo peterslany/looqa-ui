@@ -10,9 +10,10 @@ import { PostActions } from "./PostActions";
 type Props = {
   post: Post;
   showLevent?: boolean;
+  previewMedia?: boolean;
 };
 
-const PostComponent = ({ post, showLevent = true }: Props) => {
+const PostComponent = ({ post, showLevent = true, previewMedia=true }: Props) => {
   return (
     <div className="post">
       <Link
@@ -49,7 +50,7 @@ const PostComponent = ({ post, showLevent = true }: Props) => {
           >
             {post.text}
           </Link>
-          {post.media && <img src={post.media} />}
+          {post.media && <img className={`post__content__body__media ${previewMedia && "post__content__body__media--preview"}`} src={post.media} />}
         </div>
         <PostActions />
       </div>

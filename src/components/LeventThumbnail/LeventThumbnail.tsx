@@ -1,6 +1,7 @@
 import { MapPin } from "react-feather";
 import { Link } from "react-router-dom";
 import { Path } from "../../constants";
+import { getRealNpubsGoingToLevent } from "../../constants/data";
 import { LeventBase } from "../../types/levent";
 import { FrensThumbnail } from "../FrensThumbnail/FrensThumbnail";
 import "./LeventThumbnail.css";
@@ -11,10 +12,13 @@ const mockVisitorsNpubs = (seed: string, amount: number) =>
   Array.from(Array(amount)).map((_, i) => seed + i);
 
 const LeventThumbnail = ({ levent }: Props) => {
-  const npubsGoing = mockVisitorsNpubs(
-    `npub1${levent.id}${levent.name}`,
-    Math.round(Math.random() * 27)
-  );
+  const npubsGoing = [
+    ...getRealNpubsGoingToLevent(levent),
+    ...mockVisitorsNpubs(
+      `npub1${levent.id}${levent.name}`,
+      Math.round(Math.random() * 27)
+    ),
+  ];
   return (
     <Link to={`${Path.EVENT}/${levent.id}`} className="levent-thumbnail">
       <MapPin />

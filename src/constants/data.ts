@@ -1,4 +1,4 @@
-import { Levent } from "../types/levent";
+import { Levent, LeventBase } from "../types/levent";
 import { Post } from "../types/post";
 import { User } from "../types/user";
 
@@ -40,7 +40,7 @@ const userSmith: User = {
     "Crypto Enthusiast, Blockchain Developer, Coffee Lover, Advocate for Decentralization, Founder @CryptoInnovate, exploring the intersection of technology and finance.",
   avatar:
     "https://images.unsplash.com/photo-1596815070908-b542a256e9fe?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  experiences: ["bitcointokyo23", "exponyc", "filmfestnyc24"],
+  experiences: ["bitcointokyo23", "exponyc", "filmfestnyc24", "wolfnyc"],
 };
 
 const userChang: User = {
@@ -63,7 +63,12 @@ const userNoumerre: User = {
   description: "Stack sats & play hard.",
   avatar:
     "https://images.unsplash.com/photo-1698365039593-5180c517bb96?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  experiences: ["bitcointokyo23", "bitcoinlondon23", "artexpoparis24"],
+  experiences: [
+    "bitcointokyo23",
+    "bitcoinlondon23",
+    "artexpoparis24",
+    "wolfnyc",
+  ],
 };
 
 const userFulder: User = {
@@ -74,7 +79,7 @@ const userFulder: User = {
   description: `Dedicated investigator of the unexplained and holder of a degree in Paranormal Studies, Fox Mulder brings a unique perspective to the world of mysteries. Organizer of the X Files Art Project Exhibition, exploring the intersection of art and the unknown.`,
   avatar:
     "https://images.unsplash.com/photo-1694106192312-08d813b3d2ef?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  experiences: ["xfilesartproject", "wi-tahin"],
+  experiences: ["xfilesartproject", "wi-tahin", "wolfnyc"],
 };
 
 const users = [
@@ -127,7 +132,7 @@ const leventPeruviana: Levent = {
   Wi Tahin: SESSAMPASTE Exhibition invites art enthusiasts, cultural explorers, and the curious-minded to join in this celebration of creativity and diversity. Experience the harmonious blend of tradition and innovation, where art becomes a universal language that speaks to the heart and soul of humanity.`,
   visitorCount: 55,
   previewImage:
-    "https://www.gannett-cdn.com/-mm-/5c68917db80eec280d07352d0c01fee18634be0b/c=17-0-7663-4320/local/-/media/2016/09/13/WIGroup/Appleton/636093672521272265-FCEC-Rendering1.jpg?width=3200&height=1809&fit=crop&format=pjpg&auto=webp",
+    "https://images.unsplash.com/photo-1438012940875-4bf705025a8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   organizer: userAgarcia,
   location: {
     label: "New York City",
@@ -171,7 +176,7 @@ const leventNYC2: Levent = {
 };
 
 const leventNYC3: Levent = {
-  id: "wolf-meetup",
+  id: "wolfnyc",
   name: "Wolf BTC Meetup",
   startDate: new Date().toISOString(),
   endDate: new Date().toISOString(),
@@ -297,7 +302,7 @@ const leventXFilesArtProject: Levent = {
   AOA: "ca5c0a9820fd924f76f24e0002e6e5e3565d4a3f445512eb0720fa105de9550di0",
 };
 
-const leventsNYC = [leventNYC1, leventNYC2, leventNYC3];
+const leventsNYC = [leventNYC3, leventNYC1, leventNYC2];
 
 const levents = [
   leventBitcoinHongKong,
@@ -309,6 +314,8 @@ const levents = [
   leventXFilesArtProject,
   ...leventsNYC,
 ];
+
+const featuredLevents = [leventBitcoinHongKong, leventNYC3, leventPeruviana];
 
 const posts: Array<Post> = [
   {
@@ -341,7 +348,7 @@ const posts: Array<Post> = [
     author: userAgarcia,
     levent: leventPeruviana,
     media:
-      "https://i.pinimg.com/originals/05/6b/0a/056b0ab04716fc8c1278f25cdc813381.jpg",
+      "https://images.unsplash.com/photo-1529432337323-223e988a90fb?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     timestamp: new Date(2024, 0, 1, 15, 46).toISOString(),
   },
   {
@@ -424,6 +431,11 @@ const posts: Array<Post> = [
   },
 ];
 
+const getRealNpubsGoingToLevent = (levent: LeventBase) =>
+  users
+    .filter(({ experiences }) => experiences.includes(levent.id))
+    .map(({ npubkey }) => npubkey);
+
 export {
   leventBitcoinHongKong,
   leventNYC1,
@@ -434,4 +446,6 @@ export {
   posts,
   levents,
   users,
+  getRealNpubsGoingToLevent,
+  featuredLevents,
 };

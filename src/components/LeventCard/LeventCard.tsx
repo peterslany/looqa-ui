@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Path } from "../../constants";
+import { getRealNpubsGoingToLevent } from "../../constants/data";
 import { useLocationDetails } from "../../hooks/useLocationDetails";
 import { Levent } from "../../types/levent";
 import { FrensThumbnail } from "../FrensThumbnail/FrensThumbnail";
@@ -13,10 +14,13 @@ const mockVisitorsNpubs = (seed: string, amount: number) =>
 const LeventCard = ({ levent }: Props) => {
   const { data: locationData } = useLocationDetails(levent.location);
 
-  const npubsGoing = mockVisitorsNpubs(
-    `npub1${levent.id}${levent.name}`,
-    Math.round(Math.random() * 27)
-  );
+  const npubsGoing = [
+    ...getRealNpubsGoingToLevent(levent),
+    ...mockVisitorsNpubs(
+      `npub1${levent.id}${levent.name}`,
+      Math.round(Math.random() * 27)
+    ),
+  ];
 
   const address = locationData?.address
     ? `${locationData.address.road} ${locationData.address.house_number || ""}`
