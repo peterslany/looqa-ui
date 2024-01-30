@@ -13,7 +13,7 @@ const Header = () => {
         looqa
       </Link>
       {/* TODO: handle connect wallet btn */}
-      <button>connect nostr account</button>
+      <button onClick={() => window.alert("Connect using your email or nostr account.")}>sign in</button>
     </nav>
   );
 };
